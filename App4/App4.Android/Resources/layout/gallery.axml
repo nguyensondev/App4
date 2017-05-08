@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_blue"
+    android:orientation="vertical"
+    android:weightSum="1">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.1"
+      android:background="@color/landsofttitle">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"
+        android:id="@+id/imgBack"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/lblCountImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:text="(0/5)"
+        android:layout_toLeftOf="@+id/lblDone" />
+    <TextView
+        android:id="@+id/lblDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:text="XONG"
+        android:layout_alignParentRight="true"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:text="Thư viện"
+        android:layout_toRightOf="@+id/imgBack"
+        android:layout_marginLeft="10dp" />
+  </RelativeLayout>
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.9">
+    <GridView
+        android:id="@+id/gridGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:numColumns="3"
+        android:padding="0dp"
+        android:listSelector="@drawable/border"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        tools:listitem="@layout/gallery_item_new" />
+    <ImageView
+        android:id="@+id/imgNoMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/no_media" />
+  </FrameLayout>
+  <LinearLayout
+      android:id="@+id/llBottomContainer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <!--<LinearLayout
+        android:id="@+id/llBottomContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btnGalleryOk"
+            style="@style/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_sel"
+            android:text="@string/btn_ok" />
+    </LinearLayout>-->
+</LinearLayout>
